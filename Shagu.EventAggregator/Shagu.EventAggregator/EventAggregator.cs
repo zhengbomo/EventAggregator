@@ -107,6 +107,15 @@ namespace Shagu.EventAggregator
         }
 
         /// <summary>
+        /// Searches the subscribed handlers to check if we have a handler for
+        /// the message type supplied.
+        /// </summary>
+        public bool HandlerExistsFor(Type messageType)
+        {
+            return handlers.Any(handler => handler.Type == messageType & handler.Sender.IsAlive);
+        }
+
+        /// <summary>
         /// clear subscribers
         /// </summary>
         public void Clear()

@@ -38,6 +38,12 @@ namespace Shagu.EventAggregator
         void Unsubscribe<T>(object subscriber);
 
         /// <summary>
+        /// Searches the subscribed handlers to check if we have a handler for
+        /// the message type supplied.
+        /// </summary>
+        bool HandlerExistsFor(Type messageType);
+
+        /// <summary>
         /// clear all subscriber
         /// </summary>
         void Clear();
