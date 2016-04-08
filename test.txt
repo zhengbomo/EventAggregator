@@ -8,4 +8,4 @@ qrcode
 
 local changed
 
-local changed 2
+remote changed2
