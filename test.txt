@@ -6,3 +6,5 @@ third changed
 
 
 qrcode
+
+fixbug
